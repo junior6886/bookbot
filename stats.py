@@ -7,5 +7,6 @@ def get_num_occurrances(text):
     dict = {}
     chars = list(text)
     for c in chars:
-        dict[c] = text.count(c)
+        if dict.get(c) == None:
+            dict[c] = text.count(c)
     return dict
